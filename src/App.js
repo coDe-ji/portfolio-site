@@ -9,6 +9,7 @@ function App() {
       <Landing />
       <Projects />
       <Contact />
+      <p class="text-[4px]">DesIgned by CO-DEji.2023.</p>
     </div>
   )
 }
