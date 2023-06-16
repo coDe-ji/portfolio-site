@@ -68,9 +68,9 @@ function Projects() {
             class="flex flex-row  max-w-sm relative space-x-5 transition-transform ease-out duration-500"
             style={{ transform: `translateX(-${curr * 50}%)` }}
           >
-            <div class="flex  space-x-5 max-w-full relative border ">
+            <div class="flex  space-x-5 max-w-full relative border overflow-hidden z-0 ">
               {projects.map((project) => (
-                <div class="border flex-shrink-0 w-44 bg-[..src/images/textCipher.png] bg-cover bg-center h-48">
+                <div class="border flex-shrink-0 w-44 bg-white h-48 z-20">
                   <div class="flex justify-center items-center h-[85%]">
                     <p>{project.projectName}</p>
                   </div>

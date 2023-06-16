@@ -41,31 +41,32 @@ function Contact() {
 
       <div class="w-1/2 m-6">
         <div class="border-black border">
-          <p class="text-xs font-bold m-1 pt-4">YOUR DETAILS</p>
-          <form>
+          <form className="m-1">
+            <p class="text-xs font-bold m-1 pt-4">YOUR DETAILS</p>
             <div class="flex flex-row">
               <input
                 type="text"
                 placeholder="Name"
-                class="w-1/2 m-1 text-xs border-b border-black bg-[#F4F4F4] italic"
+                class="w-[44%] m-1 text-xs border-b border-black bg-[#F4F4F4] italic p-1"
               />
               <input
                 type="text"
                 placeholder="Email"
-                class="w-1/2 m-1 text-xs border-b border-black bg-[#F4F4F4] italic"
+                class="w-[44%] m-1 text-xs border-b border-black bg-[#F4F4F4] italic p-1"
               />
             </div>
 
             <p class="text-xs font-bold m-1 pt-2">YOUR MESSAGE</p>
             <textarea
-              class="text-xs border-b border-black bg-[#F4F4F4] italic w-11/12 m-1"
+              class="text-xs border-b border-black bg-[#F4F4F4] italic w-11/12 m-1 p-1"
+              rows="10"
               placeholder="Start typing..."
             ></textarea>
           </form>
           <button class="text-[7px] rounded-full p-1 my-5 ml-1 bg-[#D9D9D9]">
             Let's talk
           </button>
-        </div>{" "}
+        </div>
       </div>
     </div>
   )
