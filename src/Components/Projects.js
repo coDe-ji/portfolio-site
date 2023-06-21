@@ -4,6 +4,7 @@ import { IconContext } from "react-icons"
 import { useState } from "react"
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import "tailwindcss/tailwind.css"
+import bgImage from "../images/textCipher.png"
 
 function Projects() {
   const projects = [
@@ -23,25 +24,25 @@ function Projects() {
       projectName: "City Weather",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
-      projectImage: "https://www.example.com/image.jpg",
+      projectImage: "../images/textCipher.png",
     },
     {
       projectName: "Cococure",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
-      projectImage: "https://www.example.com/image.jpg",
+      projectImage: "../images/textCipher.png",
     },
     {
       projectName: "Cococure",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
-      projectImage: "https://www.example.com/image.jpg",
+      projectImage: "../images/textCipher.png",
     },
     {
       projectName: "Cococure",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
-      projectImage: "https://www.example.com/image.jpg",
+      projectImage: "../images/textCipher.png",
     },
   ]
 
@@ -53,10 +54,13 @@ function Projects() {
     setCurr((curr) => (curr === projects.length - 1 ? 0 : curr + 1))
 
   return (
-    <div class="bg-[#E7E7E7] h-screen relative">
-      <div class="m-3  ">
-        <h1>A FEW SELECTED WORKS</h1>
-        <p class="text-xs w-full pb-4">
+    <div className="bg-[#E7E7E7] h-screen z-10 relative">
+      <div className="m-3">
+        <div className="py-3">
+          <h1>A FEW SELECTED WORKS</h1>
+        </div>
+
+        <p class="text-xs w-full pb-4 text-center px-2  my-0">
           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
           laying out print, graphic or web designs. The passage is attributed to
           an unknown typesetter in the 15th century who is thought to have
@@ -65,25 +69,31 @@ function Projects() {
         </p>
         <div className="flex justify-center border">
           <div
-            class="flex flex-row  max-w-sm relative space-x-5 transition-transform ease-out duration-500"
+            className="flex flex-row  max-w-sm relative space-x-5 transition-transform ease-out duration-500 overflow-hidden"
             style={{ transform: `translateX(-${curr * 50}%)` }}
           >
-            <div class="flex  space-x-5 max-w-full relative border overflow-hidden z-0 ">
+            <div className="flex  space-x-5 max-w-screen relative border">
               {projects.map((project) => (
-                <div class="border flex-shrink-0 w-44 bg-white h-48 z-20">
-                  <div class="flex justify-center items-center h-[85%]">
+                <div
+                  className={`border shrink-0 w-[8rem] bg-white h-[9rem] bg-contain bg-center rounded-lg`}
+                  style={{ backgroundImage: `url(${bgImage})` }}
+                >
+                  <div className="flex justify-center items-center h-[85%] pt-4">
                     <p>{project.projectName}</p>
                   </div>
-                  <div class="flex flex-row place-content-between w-full h-[12%] mt-1.5 bg-[#dfdede]">
-                    <div>
-                      <a class="text-[6px] m-1" href={project.projectLiveLink}>
-                        VIEW PROJECT<span class="">&#8599;</span>
+                  <div className="flex flex-row place-content-between w-full h-[13%] mt-1 bg-[#dfdede]">
+                    <div className=" -mt-1">
+                      <a
+                        className="text-[6px] m-1"
+                        href={project.projectLiveLink}
+                      >
+                        VIEW PROJECT<span>&#8599;</span>
                       </a>
                     </div>
                     <IconContext.Provider
                       value={{ color: "black", size: "0.8em" }}
                     >
-                      <div class=" mx-1 pt-2">
+                      <div className=" mx-1 pt-1">
                         <a href={project.projectCodeLink}>
                           <AiOutlineGithub />
                         </a>
@@ -111,18 +121,18 @@ function Projects() {
           </button>
         </div>
 
-        <div className="absolute bottom-12 right-0 left-0">
+        <div className="absolute bottom-16 right-0 left-0 ">
           <div className="flex items-center justify-center gap-2">
             {projects.map((_, i) => (
               <div
-                className={`transition-all w-1.5 h-1.5 bg-white rounded-full
-                ${curr === i ? "p-1" : "bg-opacity-50"}`}
+                className={`transition-all w-1 h-1 bg-white rounded-full
+                ${curr === i ? "p-[3px]" : "bg-opacity-50"}`}
               ></div>
             ))}
           </div>
         </div>
 
-        <div class=" mt-8">
+        <div class=" mt-12 animate-bounce">
           <a class="text-[9px]" href="https://www.example.com">
             VIEW ALL PROJECTS<span class="">&#8599;</span>
           </a>

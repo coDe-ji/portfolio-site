@@ -5,7 +5,7 @@ import { IconContext } from "react-icons"
 
 function Contact() {
   return (
-    <div class="flex h-screen p-2 relative">
+    <div class="flex h-screen relative py-8 px-4 z-0">
       <div class="w-1/2 mx-1">
         <h1 class="py-2">I would love to hear from You </h1>
         <p class="text-xs w-5/6 pb-8">
