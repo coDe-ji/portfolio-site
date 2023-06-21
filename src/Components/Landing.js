@@ -9,7 +9,7 @@ function Landing() {
   return (
     <div class="h-screen relative z-10">
       <div class="flex flex-row place-content-between px-1 fixed z-30 w-full">
-        <div class="border border-[#8b575c] text-[10px] p-2 m-2 h-5 w-15 flex items-center">
+        <div class="border border-[#070707] text-[10px] p-2 m-2 h-5 w-15 flex items-center">
           <h4 class="text-[#8b575c]">CO-DEji</h4>
         </div>
 
