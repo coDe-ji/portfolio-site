@@ -55,12 +55,12 @@ function Projects() {
 
   return (
     <div className="bg-[#E7E7E7] h-screen z-10 relative">
-      <div className="m-3">
-        <div className="py-3">
+      <div className="m-3 flex flex-col">
+        <div className="py-6 text-[3.5em]">
           <h1>A FEW SELECTED WORKS</h1>
         </div>
 
-        <p class="text-xs w-full pb-4 text-center px-2  my-0">
+        <p class="text-[14px] w-4/5 pb-16 text-center self-center">
           Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
           laying out print, graphic or web designs. The passage is attributed to
           an unknown typesetter in the 15th century who is thought to have
@@ -68,15 +68,18 @@ function Projects() {
           type specimen book.
         </p>
         <div className="flex justify-center border">
-          <div
-            className="flex flex-row  max-w-sm relative space-x-5 transition-transform ease-out duration-500 overflow-hidden"
-            style={{ transform: `translateX(-${curr * 50}%)` }}
-          >
-            <div className="flex  space-x-5 max-w-screen relative border">
+          <div className="flex flex-row  max-w-sm relative space-x-5 transition-transform ease-out duration-500 overflow-hidden">
+            <div
+              className="flex  space-x-5 max-w-screen relative border"
+              // style={{ transform: `translateX(-${curr * 20}%)` }}
+            >
               {projects.map((project) => (
                 <div
-                  className={`border shrink-0 w-[8rem] bg-white h-[9rem] bg-contain bg-center rounded-lg`}
-                  style={{ backgroundImage: `url(${bgImage})` }}
+                  className={`border shrink-0 w-[20rem] bg-white h-[24rem] bg-contain bg-center rounded-lg`}
+                  style={{
+                    backgroundImage: `url(${bgImage})`,
+                    transform: `translateX(-${curr * 100}%)`,
+                  }}
                 >
                   <div className="flex justify-center items-center h-[85%] pt-4">
                     <p>{project.projectName}</p>
@@ -132,8 +135,8 @@ function Projects() {
           </div>
         </div>
 
-        <div class=" mt-12 animate-bounce">
-          <a class="text-[9px]" href="https://www.example.com">
+        <div class=" mt-12 animate-bounce absolute bottom-4">
+          <a class="text-[29px]" href="https://www.example.com">
             VIEW ALL PROJECTS<span class="">&#8599;</span>
           </a>
         </div>
