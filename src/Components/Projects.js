@@ -13,36 +13,48 @@ function Projects() {
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
       projectImage: "../images/textCipher.png",
+      projectDescription:
+        "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.",
     },
     {
       projectName: "Text-Cipher",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
       projectImage: "https://www.example.com/image.jpg",
+      projectDescription:
+        "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.",
     },
     {
       projectName: "City Weather",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
       projectImage: "../images/textCipher.png",
+      projectDescription:
+        "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.",
     },
     {
       projectName: "Cococure",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
       projectImage: "../images/textCipher.png",
+      projectDescription:
+        "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.",
     },
     {
       projectName: "Cococure",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
       projectImage: "../images/textCipher.png",
+      projectDescription:
+        "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.",
     },
     {
       projectName: "Cococure",
       projectLiveLink: "https://www.google.com",
       projectCodeLink: "https://www.google.com",
       projectImage: "../images/textCipher.png",
+      projectDescription:
+        "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.",
     },
   ]
 
@@ -67,52 +79,79 @@ function Projects() {
           scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
           type specimen book.
         </p>
-        <div className="flex justify-center border">
-          <div className="flex flex-row  max-w-sm relative space-x-5 transition-transform ease-out duration-500 overflow-hidden">
-            <div
-              className="flex  space-x-5 max-w-screen relative border"
-              // style={{ transform: `translateX(-${curr * 20}%)` }}
-            >
+        <div className="flex border justify-center">
+          <div className="flex flex-row relative space-x-5 transition-transform ease-out duration-10000">
+            <div className="flex  space-x-5  max-w-sm relative border overflow-hidden">
               {projects.map((project) => (
                 <div
-                  className={`border shrink-0 w-[20rem] bg-white h-[24rem] bg-contain bg-center rounded-lg`}
+                  className={`border shrink-0 w-[24rem] bg-white h-[24rem] bg-contain bg-center rounded-lg`}
                   style={{
                     backgroundImage: `url(${bgImage})`,
-                    transform: `translateX(-${curr * 100}%)`,
+                    transform: `translateX(-${curr * 105}%)`,
                   }}
                 >
-                  <div className="flex justify-center items-center h-[85%] pt-4">
+                  <div className="flex text-[68px] justify-center items-center h-[85%] pt-4">
                     <p>{project.projectName}</p>
-                  </div>
-                  <div className="flex flex-row place-content-between w-full h-[13%] mt-1 bg-[#dfdede]">
-                    <div className=" -mt-1">
-                      <a
-                        className="text-[6px] m-1"
-                        href={project.projectLiveLink}
-                      >
-                        VIEW PROJECT<span>&#8599;</span>
-                      </a>
-                    </div>
-                    <IconContext.Provider
-                      value={{ color: "black", size: "0.8em" }}
-                    >
-                      <div className=" mx-1 pt-1">
-                        <a href={project.projectCodeLink}>
-                          <AiOutlineGithub />
-                        </a>
-                      </div>
-                    </IconContext.Provider>
                   </div>
                 </div>
               ))}
             </div>
+            <div className="flex flex-col justify-center border border-black px-10">
+              <div className="w-[44em]">
+                <p>{projects[curr].projectDescription}</p>
+              </div>
+              <div className="my-8">
+                <p>Technolgies used</p>
+                <div className="flex gap-10 flex-row">
+                  <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                    <div className=" mx-1 pt-1">
+                      <a href={projects[curr].projectCodeLink}>
+                        <AiOutlineGithub />
+                      </a>
+                    </div>
+                  </IconContext.Provider>
+                  <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                    <div className=" mx-1 pt-1">
+                      <a href={projects[curr].projectCodeLink}>
+                        <AiOutlineGithub />
+                      </a>
+                    </div>
+                  </IconContext.Provider>
+                  <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                    <div className=" mx-1 pt-1">
+                      <a href={projects[curr].projectCodeLink}>
+                        <AiOutlineGithub />
+                      </a>
+                    </div>
+                  </IconContext.Provider>
+                </div>
+              </div>
+
+              <div className="flex flex-row place-content-between w-full h-[13%] mt-1 bg-[#dfdede]">
+                <div className=" mt-5 ml-2">
+                  <a
+                    className="text-[14px] m-1"
+                    href={projects[curr].projectLiveLink}
+                  >
+                    VIEW PROJECT<span>&#8599;</span>
+                  </a>
+                </div>
+                <IconContext.Provider value={{ color: "black", size: "2em" }}>
+                  <div className=" mx-1 mt-3 ">
+                    <a href={projects[curr].projectCodeLink}>
+                      <AiOutlineGithub />
+                    </a>
+                  </div>
+                </IconContext.Provider>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="absolute inset-y-0 flex items-center space-x-[26rem] ">
+        <div className="absolute inset-y-0 flex items-center space-x-[80rem] ">
           <button
             onClick={prev}
-            className=" p-1 ml-12 rounded-full shadow bg-grey/80 text-gray-800 hover:bg-white"
+            className=" p-1 ml-12 rounded-full shadow bg-grey/80 text-gray-800 hover:bg-white border "
           >
             <FiChevronLeft />
           </button>
@@ -124,12 +163,12 @@ function Projects() {
           </button>
         </div>
 
-        <div className="absolute bottom-16 right-0 left-0 ">
+        <div className="absolute bottom-28 right-0 left-0 ">
           <div className="flex items-center justify-center gap-2">
             {projects.map((_, i) => (
               <div
-                className={`transition-all w-1 h-1 bg-white rounded-full
-                ${curr === i ? "p-[3px]" : "bg-opacity-50"}`}
+                className={`transition-all w-2 h-3 bg-black rounded-full
+                ${curr === i ? "p-[3px]" : "bg-opacity-40"}`}
               ></div>
             ))}
           </div>

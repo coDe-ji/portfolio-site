@@ -19,5 +19,9 @@ module.exports = {
       "7xl": "5rem",
     },
     plugins: [],
+    safelist: [
+      "animate-[fade-in_1s_ease-in-out]",
+      "animate-[fade-in-up_1s_ease-in-out]",
+    ],
   },
 }

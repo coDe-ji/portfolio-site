@@ -1,4 +1,6 @@
 import "./App.css"
+// Initialization for ES Users
+
 import Landing from "./Components/Landing"
 import Projects from "./Components/Projects"
 import Contact from "./Components/Contact"
@@ -9,7 +11,11 @@ function App() {
       <Landing />
       <Projects />
       <Contact />
-      <p class="text-[4px]">DesIgned by CO-DEji.2023.</p>
+      <div>
+        <p class="text-[14px] text-center">
+          &#169;DesIgned by CO-DEji.2023.&#8482;
+        </p>
+      </div>
     </div>
   )
 }
