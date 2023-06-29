@@ -8,7 +8,7 @@ import { AiFillLinkedin } from "react-icons/ai"
 function Landing() {
   return (
     <div class="h-screen relative z-10">
-      <div class="flex flex-row place-content-between px-1 fixed z-30 w-full">
+      <div class="flex flex-row place-content-between px-1 fixed z-40 w-full border ">
         <div class="border border-[rgb(139,87,92)] text-[10px] p-2 m-4 h-12 w-15 flex items-center">
           <h4 class="text-[#8b575c] text-[4em]">CO-DEji</h4>
         </div>
